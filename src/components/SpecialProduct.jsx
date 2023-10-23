@@ -7,11 +7,15 @@ const SpecialProduct = () => {
       <div className="special-product-card">
       <div className="d-flex justify-content-between">
           <div className="">
-            <img src="images/images/watch.jpg" className='img-fluid' alt="watch" />
+            <Link to="/product/:id">
+              <img src="images/images/watch.jpg" className='img-fluid' alt="watch" />
+            </Link>
           </div>
           <div className="special-product-content">
-            <h5 className="brand">Havels</h5>
-            <h6 className="title">Samsum Galxy s10</h6>
+            <Link to="product/:id" className='text-dark'>
+              <h5 className="brand">Havels</h5>
+              <h6 className="title">Samsum Galxy s10</h6>
+            </Link>
             <ReactStars 
                     count={5}
                     size={24}
@@ -47,7 +51,7 @@ const SpecialProduct = () => {
                   ></div>
                 </div>
               </div>
-              <Link className='button'>Add to Cart</Link>
+              <Link to="cart" className='button'>Add to Cart</Link>
           </div>
           </div>
       </div>
